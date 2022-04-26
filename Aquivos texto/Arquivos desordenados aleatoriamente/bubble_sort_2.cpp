@@ -43,16 +43,20 @@ int main() {
 
     auto start = std::chrono::high_resolution_clock::now();
 
+    bool troca;
+
     // Ordenacao.
-    for(int i = 0; i < array.size(); i++) {
-        for(int j = 0; j < array.size(); j++) {
-            if(array[i] < array[j]) {
+    do {
+        troca = false;
+        for(int i = 0; i < array.size(); i++) {
+            if(array[i] > array[i + 1]) {
                 aux = array[i];
-                array[i] = array[j];
-                array[j] = aux;
+                array[i] = array[i + 1];
+                array[i + 1] = aux;
+                troca = true;
             }
         }
-    }
+    } while(troca == true);
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> float_ms = end - start;
