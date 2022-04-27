@@ -39,7 +39,7 @@ int main() {
             leitura >> numero;
         }
     } else
-        cout << "Erro ao abrir o arquivo." << endl;
+        cout << "\nErro ao abrir o arquivo." << endl;
 
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -57,8 +57,8 @@ int main() {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> float_ms = end - start;
 
-    cout << "\n\nVetor: ";
-    for(int i = 0; i < array.size(); i++){
+    cout << "\nVetor: ";
+    for(int i = 0; i < array.size(); i++) {
         cout << array[i] << " ";
     }
 
