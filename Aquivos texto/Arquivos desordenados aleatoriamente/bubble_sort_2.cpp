@@ -30,7 +30,7 @@ int main() {
     ifstream leitura;
     leitura.open(concatenado, ios::in);
 
-    //int aux;
+    int aux;
 
     // Abre o arquivo e passa para o final do vetor.
     if(leitura.is_open()) {
@@ -45,10 +45,10 @@ int main() {
 
     auto start = std::chrono::high_resolution_clock::now();
 
-    //bool troca;
+    bool troca;
 
     // Ordenacao.
-    /*do {
+    do {
         troca = false;
         for(int i = 0; i < array.size(); i++) {
             if(array[i] > array[i + 1]) {
@@ -58,15 +58,15 @@ int main() {
                 troca = true;
             }
         }
-    } while(troca == true);*/
+    } while(troca == true);
 
-    bubbleSortV2(array);
+    //bubbleSortV2(array);
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> float_ms = end - start;
 
     cout << "\nVetor: ";
-    for(int i = 0; i < array.size(); i++){
+    for(int i = 0; i < array.size(); i++) {
         cout << array[i] << " ";
     }
 
